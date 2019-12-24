@@ -1,5 +1,5 @@
 # Tiny-Obstacle-Discovery
-Official Python Implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery", ICRA 2019
+Official Python Implementation for "[https://arxiv.org/abs/1904.10161v3](A Novel Multi-layer Framework for Tiny Obstacle Discovery)", ICRA 2019
 This repository contains the official python implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery". This paper has been accepted by IEEE International Conference on Robotics and Automation (ICRA) 2019. If you find the paper or the code useful, please cite our paper:
 
 ```
