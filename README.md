@@ -12,7 +12,7 @@ This repository contains the official Matlab implementation for "A Novel Multi-l
 **Note:** This version has been slightly improved on the basis of the original work, mainly including the following points:
 
  - Training code is slightly changed, ROC performance is improved.
- - For higher efficiency, the basic edge detection algorithm uses structured edge detection.
+ - For higher efficiency, the basic edge detection algorithm uses structured edge detection [1].
  - The modules in the system are largely accelerated, although there is still a lot of room for improvement.
  - To be consistent with other works in community, in the instance-level evaluation, the IoU is defined as the Intersection over Union between predicted proposals and the ground truth bounding boxes,
 
@@ -32,7 +32,7 @@ year={2019},
 ```
 
 ## Data Preparation
-### Lost and Found Dataset (LAF)
+### Lost and Found Dataset (LAF) [4]
 
 You may download the original images from [here](http://www.dhbw-stuttgart.de/~sgehrig/lostAndFoundDataset/leftImg8bit.zip) and annotations from [here](http://www.dhbw-stuttgart.de/~sgehrig/lostAndFoundDataset/gtCoarse.zip). Then, you will have the following directory structure:
 ```
@@ -71,6 +71,12 @@ For Training the algorithm on lost and found dataset, you can run the script in 
 
 ## Evaluation
 
+The evaluations are conducted at the end of ```test.m```. And there are three scripts for evaluation:
+```
+./evaluation/Func_evaluation_DR.m
+./evaluation/Func_evaluation_ROC.m
+./evaluation/Func_evaluation_time.m
+```
 
 #### Option
 For visualization, to run the script:
@@ -80,9 +86,21 @@ For visualization, to run the script:
 The performances are presented as follows:
 ![performance](./performance.png)
 
+## Reference
+```
+[1] Dollar P , Zitnick C L . Fast Edge Detection Using Structured Forests[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2015, 37(8):1558-1570.
+
+[2] Zitnick C L , Dollar P . Edge Boxes: Locating Object Proposals from Edges[C]// European Conference on Computer Vision. Springer, Cham, 2014.
+
+[3] Ma J , Ming A , Huang Z , et al. Object-Level Proposals[C]// IEEE International Conference on Computer Vision. IEEE, 2017.
+
+[4] Pinggera P , Ramos S , Gehrig S , et al. Lost and Found: Detecting Small Road Hazards for Self-Driving Vehicles[C]// IEEE/RSJ International Conference on Intelligent Robots and Systems, 2016.
+```
 
 
 # News
 
-2019/12/24, we are applying for the license.
-The code will be released after we obtain the license.
+2019/12/24, we are applying for the license. The code will be released after we obtain the license.
+
+2020/07/04, the Matlab implementation is released.
+

@@ -33,6 +33,8 @@ for k = 1:instance_num
     integral_inst = cumsum(cumsum(instmap, 2), 1);
     integral_inst(2:end+1,:) = integral_inst(:,:);
     integral_inst(:,2:end+1) = integral_inst(:,:);
+    integral_inst(0,:) = 0;
+    integral_inst(:,0) = 0;
     
     for i = 1:size(bbox,1)
         a3 = integral_inst(bbox(i,4)+1,bbox(i,3)+1,:) + integral_inst(bbox(i,2)-1+1,bbox(i,1)-1+1,:) - ...
@@ -47,6 +49,8 @@ freespacemap(gt >= fsid) = 1;
 integral_fs = cumsum(cumsum(freespacemap, 2), 1);
 integral_fs(2:end+1,:) = integral_fs(:,:);
 integral_fs(:,2:end+1) = integral_fs(:,:);
+integral_fs(0,:) = 0;
+integral_fs(:,0) = 0;
 for i = 1:size(bbox,1)
     a3 = integral_fs(bbox(i,4)+1,bbox(i,3)+1,:) + integral_fs(bbox(i,2)-1+1,bbox(i,1)-1+1,:) - ...
         integral_fs(bbox(i,4)+1,bbox(i,1)-1+1,:) - integral_fs(bbox(i,2)-1+1,bbox(i,3)+1,:);
