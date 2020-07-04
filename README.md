@@ -84,7 +84,7 @@ For visualization, to run the script:
 ./result/figuredraw.m
 ```
 The performances are presented as follows:
-![performance](./performance.png)
+![performance](performance.png)
 
 ## Reference
 ```
