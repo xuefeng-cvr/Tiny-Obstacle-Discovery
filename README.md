@@ -7,14 +7,14 @@ Official Matlab Implementation for "[A Novel Multi-layer Framework for Tiny Obst
 
 ## Introduction
 
-This repository contains the official Matlab implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery". This paper has been accepted by IEEE International Conference on Robotics and Automation (ICRA) 2019. And the the official Python/ROS implementation is coming soon.
+This repository contains the official Matlab implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery". This paper has been accepted by IEEE International Conference on Robotics and Automation (ICRA) 2019. And the official Python/ROS implementation is coming soon.
 
 **Note:** This version has been slightly improved on the basis of the original work, mainly including the following points:
 
- - Training code is slightly changed, ROC performance is improved.
+ - The training code is slightly changed, ROC performance is improved.
  - For higher efficiency, the basic edge detection algorithm uses structured edge detection [1].
  - The modules in the system are largely accelerated, although there is still a lot of room for improvement.
- - To be consistent with other works in community, in the instance-level evaluation, the IoU is defined as the Intersection over Union between predicted proposals and the ground truth bounding boxes,
+ - To be consistent with other works in the community, in the instance-level evaluation, the IoU is defined as the Intersection over Union between predicted proposals and the ground truth bounding boxes, which can be found at ```./evaluation/Func_evaluation_DR.m```
 
 
 
@@ -84,7 +84,7 @@ For visualization, to run the script:
 ./result/figuredraw.m
 ```
 The performances are presented as follows:
-![performance](performance.png)
+![performance](./performance.png)
 
 ## Reference
 ```
